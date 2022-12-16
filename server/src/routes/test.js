@@ -11,4 +11,5 @@ describe("Test POST /launch", () => {
     expect(response).toBe(200);
   });
   test("Catch missing property", () => {});
+  test("Wrong date format", () => {});
 });

@@ -18,12 +18,12 @@ function addNewLaunch(req, res) {
     });
   }
 
-  //   const launchDate = new Date(launch.launchDate);
-  //   if (isNaN(launchDate.toString())) {
-  //     return res.status(400).json({
-  //       error: "Wrong Date Format",
-  //     });
-  //   }
+  const launchDate = new Date(launch.launchDate);
+  if (isNaN(launchDate.toString())) {
+    return res.status(400).json({
+      error: "Wrong Date Format",
+    });
+  }
   return res.status(201).json(launchesModel.addNewLaunch(launch));
 }
 
